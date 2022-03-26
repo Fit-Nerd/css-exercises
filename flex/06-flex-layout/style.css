@@ -1,10 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+}
+
+.header, 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background-color: #eeeeee;
+  /* didn't need this with the correct solution margin-top: auto; */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  /* I had these 3 lines ...
+  max-width: 400px;
+  margin: auto;
+  flex-wrap: wrap;
+  but the solution has ... */ 
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +43,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* I had padding: 10px; but the solution has: */ 
+  padding: 8px, 16px;
 }
 
 input {
@@ -24,4 +53,20 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+a {
+  /* this removes the underline on links */
+  text-decoration: none;
+  color: #666;
+}
+
+ul {
+  /* this removes bullet points */
+  list-style-type: none;
+  /* and i had none of the below, I made the solution more complicated */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px
 }

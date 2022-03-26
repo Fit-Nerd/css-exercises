@@ -1,5 +1,22 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  /* I missed centering everything here, instead opting for doing so in 'element-wrap' */
+  text-align: center;
+}
+
+.element-flex {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.element-wrap {
+  /* I used the below block...
+  width: 200px;
+  flex-wrap: wrap;
+  text-align: center;
+  But it can be simplified to: */ 
+  max-width: 200px;
 }
 
 img {
@@ -10,6 +27,10 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  /* Not this: padding: 0 0 32px 0; but rather this: */
+  margin-bottom: 32px;
 }
 
 /* do not edit this footer */
